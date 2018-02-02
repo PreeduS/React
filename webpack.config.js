@@ -18,7 +18,18 @@ module.exports ={
         rules:[
             {
                 test:/\.scss$/,
-                use: ['style-loader','css-loader','sass-loader']
+                use: [
+                    {loader:'style-loader'},
+                    {
+                        loader:'css-loader',
+                        options:{
+                            modules: true,
+                            camelCase: true,
+                            localIdentName: '[name]__[local]__[hash:base64:8]'
+                        },
+                    },
+                    {loader:'sass-loader'},
+                ],
 
             },
             {
