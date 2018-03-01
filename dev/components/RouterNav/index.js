@@ -10,6 +10,7 @@ import ChildrenAPI from "../../Pages/ChildrenAPI";
 import TransitionTest from "../../Pages/TransitionTest";
 import RouteRedirectAndAsync from "../../Pages/RouteRedirectAndAsync";
 import StyledComponents from "../../Pages/StyledComponents";
+import ReduxForm from "../../Pages/ReduxForm";
 
 const RouterNav = () =>(
     <Router>
@@ -21,6 +22,7 @@ const RouterNav = () =>(
                 <NavLink exact activeClassName = {styles.routeActive} to="/TransitionTest" >TransitionTest</NavLink>
                 <NavLink exact activeClassName = {styles.routeActive} to="/RouteRedirectAndAsync" >RouteRedirectAndAsync</NavLink>
                 <NavLink exact activeClassName = {styles.routeActive} to="/StyledComponents" >StyledComponents</NavLink>
+                <NavLink exact activeClassName = {styles.routeActive} to="/ReduxForm" >ReduxForm</NavLink>
                 <NavLink exact activeClassName = {styles.routeActive} to="/" >null</NavLink>
             </div>
                         <hr />
@@ -32,6 +34,7 @@ const RouterNav = () =>(
                     <Route path="/TransitionTest" component = {TransitionTest} />
                     <Route path="/RouteRedirectAndAsync" component = {RouteRedirectAndAsync} />
                     <Route path="/StyledComponents" component = {StyledComponents} />
+                    <Route path="/ReduxForm" component = {ReduxForm} />
                     <Route path="/" render = {()=> <div>Null /</div>} />
                 </Switch>
             </div>
